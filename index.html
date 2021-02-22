@@ -1,45 +1,12 @@
+<!DOCTYPE html>
 <html>
-
-<body style="
-    background-color: silver;
-    display: flex;
-    align-items:center;
-    justify-content: center;">
-<img
-    id="img"
-    src="coixaygio1.jpg"
-    style="
-    width: 200px;
-    border-radius:50%;
-    "
-/>
-</body>
+    <head>
+        <title>
+            Website: hongduc510.ga
+        </title>
+    </head>
+    <body>
+        <h1>Hello tất cả mọi người!!!</h1>
+        <h4>Một trang web không có gì cả ngoài cái <a href = "https://www.facebook.com/contact.hongduc/"> Facebook của mình.</a> </a></h4>
+    </body>
 </html>
-<script>
-    audio = new Audio
-    audio.src = "xedangdithichay.mp3"
-    analyser = null
-
-document.onclick = () => {
-    context = new AudioContext()
-    analyser = context.createAnalyser()
-    context.createMediaElementSource(audio)
-    .connect(analyser)
-    analyser.connect(context.destination)
-    audio.play()
-    loop()
-}    
-
-function loop(){
-    window.requestAnimationFrame(loop)
-
-    fbc = new Uint8Array(analyser.frequencyBinCount);
-    analyser.getByteFrequencyData(fbc)
-
-    avg = fbc.reduce((a,b) => a + b, 0) / fbc.length
-    document.getElementById('img')
-         .style.width = avg * 5
-    document.body.style.backgroundColor =
-         'rgb( '+avg+','+avg+','+avg+')'     
-}    
-</script>
